@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./academia.css">
+  <script src="./academia.js"></script>
+  <link rel="shortcut icon" href="https://i.pinimg.com/originals/9f/a9/d5/9fa9d5bec4dacf3fef009e9a3d6abeaa.jpg"
+    type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+  <head>
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  </head>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+  </div><br>
+
+  <label for="peso"></label>
+  <input type="number" id="peso" placeholder="Peso" />
+
+  <label for="altura"></label>
+  <input type="number" id="altura" placeholder="Altura" />
+
+  <label for="idade"></label>
+  <input type="number" id="idade" placeholder="Idade" />
+
+  <button onclick="calcularIMC()">Calcular IMC</button>
+
+  <div id="resultado"></div>
+  <br>
+  <br>
+  <div class="Treinos container">
+    <ul>
+      <li class="ecto">
+        <a href="./peito.html">
+          <img
+            src="https://www.dicasdetreino.com.br/wp-content/uploads/2017/12/Treino-de-Peito-Criando-Peitorais-Gigantes.jpg"
+            alt="Peito">
+        </a>
+      </li>
+      <li class="meso">
+        <a href="./bicepsetriceps.html">
+          <img
+            src="https://www.dicasdetreino.com.br/wp-content/uploads/2017/11/Construindo-Costa-Largas-Treino-completo-ara-Costas.jpg"
+            alt="Costas">
+        </a>
+      </li>
+      <li class="endo">
+        <a href="./pernas.html">
+          <img src="https://www.dicasdetreino.com.br/wp-content/uploads/2014/06/treino-de-pernas-avancado.jpg"
+            alt="Pernas">
+        </a>
+      </li>
+      <li class="biceps">
+        <a href="./bicepsetriceps.html">
+          <img
+            src="https://www.dicasdetreino.com.br/wp-content/uploads/2016/12/treino-para-trincar-b%C3%ADceps-1024x640.jpg"
+            alt="Biceps">
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <script>
+    $(document).ready(function () {
+      $('.Treinos ul').slick({
+        dots: true, // Mostrar botões de navegação
+        infinite: true, // Repetir o slide de forma infinita
+        speed: 500, // Velocidade da transição
+        slidesToShow: 1, // Quantidade de slides visíveis
+        adaptiveHeight: true // Ajustar a altura dos slides automaticamente
+      });
+    });
+  </script>
+
+  <div class="footer">
+    <a href="https://www.facebook.com/profile.php?id=100012151302403">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/elton.esteves2/">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <p>WebSite: Welton Alfa Esteves</p>
+
+  </div>
+
+  <div class="cor">
+
+    <script>
+
+
+      function calcularIMC() {
+        // Obter informações do usuário
+        const peso = parseFloat(document.getElementById("peso").value);
+        const altura = parseFloat(document.getElementById("altura").value);
+        const idade = parseInt(document.getElementById("idade").value);
+
+        // Calcular o IMC
+        const imc = peso / (altura ** 2);
+
+        // Verificar o status do peso do usuário com base no IMC
+        let status, exercicios;
+        if (imc < 18.5) {
+          status = "abaixo do peso";
+          exercicios = "Você pode querer considerar exercícios de fortalecimento muscular para ajudar a aumentar a massa muscular.";
+        } else if (imc < 25) {
+          status = "no peso normal";
+          exercicios = "Para manter uma boa saúde, tente incorporar exercícios aeróbicos e de fortalecimento muscular em sua rotina.";
+        } else if (imc < 30) {
+          status = "com sobrepeso";
+          exercicios = "Você pode querer considerar exercícios aeróbicos e de fortalecimento muscular para ajudar a perder peso e melhorar sua saúde geral.";
+        } else {
+          status = "obeso";
+          exercicios = "É altamente recomendável que você consulte um profissional de saúde antes de iniciar qualquer programa de exercícios. Eles podem ajudá-lo a desenvolver um plano que atenda às suas necessidades individuais.";
+        }
+
+        // Mostrar o resultado ao usuário
+        const resultado = document.getElementById("resultado");
+        resultado.innerHTML = `Seu IMC é: ${imc.toFixed(
+          2
+        )}. Você está ${status} para sua altura. ${exercicios}`;
+      }
+    </script>
+  </div>
+
+
+
+</body>
+
+</html>
