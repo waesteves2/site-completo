@@ -1,0 +1,182 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+
+    color: none;
+    text-align: center;
+    background-size: cover;
+    max-width: 375px;
+    max-height: 220px;
+    margin: auto;
+    border-radius: 5px;
+    background-position: center;
+
+}
+
+p {
+
+    text-align: center;
+    color: white;
+}
+
+body {
+
+    background-image: url(https://www.fiqueinforma.com/wp-content/uploads/2017/06/Muscula%C3%A7%C3%A3o-para-homens-e-mulheres.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+input {
+
+    width: 60px;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline;
+    margin: auto;
+    margin-top: 150px;
+}
+
+li {
+
+    color: white;
+    display: inline;
+    border: 1px solid black;
+    font-size: 25px;
+    border-radius: 5px;
+
+
+}
+
+img {
+
+    max-width: 500px;
+    border-radius: 5px;
+    max-height: 250px;
+
+}
+
+button {
+
+    color: white;
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.ecto {
+
+    background-image: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+
+
+.endo {
+
+    background-image: url(https://www.dicasdetreino.com.br/wp-content/uploads/2014/06/treino-de-pernas-avancado.jpg);
+    background-position: center;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.meso {
+
+    background-image: url(https://www.dicasdetreino.com.br/wp-content/uploads/2017/11/Construindo-Costa-Largas-Treino-completo-ara-Costas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+
+}
+
+.biceps {
+
+    background-image: url(https://www.dicasdetreino.com.br/wp-content/uploads/2016/12/treino-para-trincar-b%C3%ADceps-1024x640.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.footer {
+
+    width: 100%;
+    height: 30px;
+    background-color: white;
+    margin-top: 100px;
+
+}
+
+p {
+
+    color: black;
+    font-family: 'Six Caps', sans-serif;
+    display: inline;
+    font-size: 30px;
+
+}
+
+html {
+    font-family: 'Bebas Neue', 'cursive';
+    font-size: 25px;
+    color: white;
+}
+
+.fa-facebook {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f09a";
+    font-size: 35px;
+    font-style: normal;
+    margin: 10px;
+}
+
+.fa-instagram {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f16d";
+    font-size: 35px;
+    font-style: normal;
+    margin: 10px;
+
+}
+
+a {
+
+    color: black;
+    text-decoration: none;
+}
+
+.cor {
+
+    color: white;
+    background-color: white;
+}
+
+@media screen and (max-width:480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        display: none;
+    }
+
+    #main-content {
+        width: 100%;
+    }
+
+    .menu {
+        display: block;
+        float: none;
+    }
+}
